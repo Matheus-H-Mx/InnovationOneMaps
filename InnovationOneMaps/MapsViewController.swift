@@ -6,9 +6,16 @@
 //
 
 import UIKit
-
+import MapKit
 
 class MapsviewController: UIViewController {
+    
+    @IBOutlet weak var MKMapView: MKMapView!
+    
+    let locationManeger: CLLocationManager = CLLocationManager()
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
