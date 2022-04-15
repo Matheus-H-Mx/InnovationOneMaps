@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CA403852807969A00825D39 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA403842807969A00825D39 /* Address.swift */; };
+		5CA403872807994700825D39 /* AddressesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA403862807994700825D39 /* AddressesTableViewController.swift */; };
 		5CAEDD942800B6610092D2CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAEDD932800B6610092D2CA /* AppDelegate.swift */; };
 		5CAEDD962800B6610092D2CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAEDD952800B6610092D2CA /* SceneDelegate.swift */; };
 		5CAEDD982800B6610092D2CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAEDD972800B6610092D2CA /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5CA403842807969A00825D39 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		5CA403862807994700825D39 /* AddressesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressesTableViewController.swift; sourceTree = "<group>"; };
 		5CAEDD902800B6610092D2CA /* InnovationOneMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InnovationOneMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CAEDD932800B6610092D2CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CAEDD952800B6610092D2CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				5CAEDD9E2800B6620092D2CA /* LaunchScreen.storyboard */,
 				5CAEDDA12800B6620092D2CA /* Info.plist */,
 				5CE88AD42800BB8300405533 /* MapsViewController.swift */,
+				5CA403842807969A00825D39 /* Address.swift */,
+				5CA403862807994700825D39 /* AddressesTableViewController.swift */,
 			);
 			path = InnovationOneMaps;
 			sourceTree = "<group>";
@@ -141,10 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CA403872807994700825D39 /* AddressesTableViewController.swift in Sources */,
 				5CAEDD982800B6610092D2CA /* ViewController.swift in Sources */,
 				5CAEDD942800B6610092D2CA /* AppDelegate.swift in Sources */,
 				5CAEDD962800B6610092D2CA /* SceneDelegate.swift in Sources */,
 				5CE88AD52800BB8300405533 /* MapsViewController.swift in Sources */,
+				5CA403852807969A00825D39 /* Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +228,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -274,7 +282,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k5R-Cq-Iqv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -81,6 +82,22 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sA1-P0-elo">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                             </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite um Endereço." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VC1-yV-nti">
+                                <rect key="frame" x="20" y="102" width="314" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="v3j-1Q-1AL"/>
+                                    <constraint firstAttribute="height" constant="50" id="wpW-AC-FqM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S87-Px-iEV">
+                                <rect key="frame" x="349" y="105" width="45" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="GO"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k1B-Kl-BOS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -88,19 +105,53 @@
                             <constraint firstItem="sA1-P0-elo" firstAttribute="top" secondItem="k1B-Kl-BOS" secondAttribute="top" id="ELt-D7-z0C"/>
                             <constraint firstItem="sA1-P0-elo" firstAttribute="leading" secondItem="k1B-Kl-BOS" secondAttribute="leading" id="M98-Of-rIO"/>
                             <constraint firstItem="sA1-P0-elo" firstAttribute="top" secondItem="k1B-Kl-BOS" secondAttribute="top" id="Vc8-13-9CU"/>
+                            <constraint firstItem="VC1-yV-nti" firstAttribute="leading" secondItem="k1B-Kl-BOS" secondAttribute="leading" constant="20" id="bEr-ej-4pQ"/>
                             <constraint firstItem="k1B-Kl-BOS" firstAttribute="bottom" secondItem="sA1-P0-elo" secondAttribute="bottom" id="cJI-3L-lea"/>
                             <constraint firstItem="k1B-Kl-BOS" firstAttribute="trailing" secondItem="sA1-P0-elo" secondAttribute="trailing" id="eo3-wx-ajH"/>
+                            <constraint firstItem="VC1-yV-nti" firstAttribute="top" secondItem="k1B-Kl-BOS" secondAttribute="top" constant="14" id="gkX-b8-mlc"/>
+                            <constraint firstItem="k1B-Kl-BOS" firstAttribute="bottom" secondItem="VC1-yV-nti" secondAttribute="bottom" constant="50" id="hK3-6u-wJm"/>
+                            <constraint firstItem="k1B-Kl-BOS" firstAttribute="trailing" secondItem="VC1-yV-nti" secondAttribute="trailing" constant="80" id="rqn-Wx-6Mc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ELb-uf-YAN"/>
                     <connections>
+                        <outlet property="AdressTextField" destination="N4a-01-WsS" id="yQx-ON-6bX"/>
                         <outlet property="MKMapView" destination="sA1-P0-elo" id="C1N-wx-CSF"/>
                         <outlet property="MapView" destination="N4a-01-WsS" id="lJX-ef-Tcb"/>
+                        <outlet property="TappedShowAdress" destination="N4a-01-WsS" id="H8f-4K-TrK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HC7-Uk-yB3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2944.9275362318845" y="448.66071428571428"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="idZ-bw-gFk">
+            <objects>
+                <tableViewController id="Dlp-lp-gos" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="AddressesTableViewController" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="h1n-QS-6Up" customClass="AddressesTableViewController" customModule="InnovationOneMaps" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddressCell" id="1Re-hZ-dqb">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Re-hZ-dqb" id="lLz-gL-TZ6">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Dlp-lp-gos" id="siw-GN-Bfq"/>
+                            <outlet property="delegate" destination="Dlp-lp-gos" id="UhB-hc-Yse"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pkW-pY-yi1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3777" y="449"/>
         </scene>
     </scenes>
     <resources>
